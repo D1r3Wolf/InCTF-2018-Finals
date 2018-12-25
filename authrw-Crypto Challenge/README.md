@@ -5,11 +5,11 @@
 ![Login,Register](https://raw.githubusercontent.com/Ajay-Aj-00/Test/master/Images/1.png "Service")
 ### 1 - Register
 ```py
-        def register(username):
-            global iv, key
-            username = "username=" + username + ":role=ordinary"
-            cookie = iv + _encrypt(username, iv, key)
-            return cookie.encode("hex")
+    def register(username):
+        global iv, key
+        username = "username=" + username + ":role=ordinary"
+        cookie = iv + _encrypt(username, iv, key)
+        return cookie.encode("hex")
 ```
 * For the Register it asks the user for **username** (username != 'admin')
 * Then it Encrypts the `pad("username=input():role=ordinary")` with AES CBC 128-bit Encryption
@@ -19,18 +19,18 @@
  ![Register](https://raw.githubusercontent.com/Ajay-Aj-00/Test/master/Images/S.png "Register")
 ### 2 - Login
 ```py
-        def login(cookie):
-            cookie = cookie.decode("hex")
-            iv = cookie[:16]
-            global key
-            ciphertext = cookie[16:]
-            plaintext = _decrypt(ciphertext, iv, key)
-            plaintext = plaintext.split(":")
-            assert len(plaintext) == 2
-            assert plaintext[0][:9] == "username="
-            assert plaintext[1][:5] == "role="
-            return (plaintext[0][9:], plaintext[1][5:])
-            print colors.red + "[-] Invalid cookie!" + colors.reset
+    def login(cookie):
+        cookie = cookie.decode("hex")
+        iv = cookie[:16]
+        global key
+        ciphertext = cookie[16:]
+        plaintext = _decrypt(ciphertext, iv, key)
+        plaintext = plaintext.split(":")
+        assert len(plaintext) == 2
+        assert plaintext[0][:9] == "username="
+        assert plaintext[1][:5] == "role="
+        return (plaintext[0][9:], plaintext[1][5:])
+        print colors.red + "[-] Invalid cookie!" + colors.reset
 ```
 * For the Login it asks for cookie(Provided after registration)
 * Then It Decrypts it , unpad it >> `username=(username):role=ordinary` and It parses the string and saves username and role in user , role variables
