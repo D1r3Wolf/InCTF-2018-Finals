@@ -4,6 +4,13 @@
 * **It Runs a Crypto Service in which it has `Login` and `Register` services**
 ![Login,Register](https://raw.githubusercontent.com/Ajay-Aj-00/Test/master/Images/1.png "Service")
 ### 1 - Register
+```sh
+def register(username):
+    global iv, key
+    username = "username=" + username + ":role=ordinary"
+    cookie = iv + _encrypt(username, iv, key)
+    return cookie.encode("hex")
+```
 * For the Register it asks the user for **username** (username != 'admin')
 * Then it Encrypts the `pad("username=input():role=ordinary")` with AES CBC 128-bit Encryption
 * After that It returns a cookie which is `"IV+Cipher_text".encode('hex')`
