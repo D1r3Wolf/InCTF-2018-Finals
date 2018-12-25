@@ -1,6 +1,6 @@
 # authrw
-* [authrw](https://github.com/Ajay-Aj-00/Test/tree/master/authrw) is a **Crypto Challenge** given in InCTF-2018 Finals Attack and Defence
-* It uses the `AES 128-bit CBC mode Encrytion`.`IV(16 bytes)` is given in iv.txt but we have to **generate the key** using [generate_key.py](https://github.com/Ajay-Aj-00/Test/tree/master/authrw/generate_key.py) which takes the Team password as input.The generated Key is `md5 hash of Team password`.
+* [authrw](https://github.com/D1r3Wolf/InCTF-2018-Finals/tree/master/authrw-Crypto%20Challenge/authrw) is a **Crypto Challenge** given in InCTF-2018 Finals Attack and Defence
+* It uses the `AES 128-bit CBC mode Encrytion`.`IV(16 bytes)` is given in iv.txt but we have to **generate the key** using [generate_key.py](https://github.com/D1r3Wolf/InCTF-2018-Finals/blob/master/authrw-Crypto%20Challenge/authrw/generate_key.py) which takes the Team password as input.The generated Key is `md5 hash of Team password`.
 * **It Runs a Crypto Service in which it has `Login` and `Register` services**
 ![Login,Register](https://raw.githubusercontent.com/Ajay-Aj-00/Test/master/Images/1.png "Service")
 ### 1 - Register
@@ -20,7 +20,7 @@
 * Here Comes the Problem We cant give the 'admin' as username while registering Then we cant get user as 'admin' after decryption so we move to else condition.
 * But they have some Vullnerabilities. See the Below links(`Exploiting the Vulnerabilities`)
 > In Those 3 conditions<br>
-> 1 Provides us Reading rights of Flag([Reading authorization](https://github.com/Ajay-Aj-00/Test/tree/master/authR_Exploit))<br>
-> 2 Provides us Writing rights of Flag([Writing authorization](https://github.com/Ajay-Aj-00/Test/tree/master/authW_Exploit))<br>
+> 1 Provides us Reading rights of Flag([Reading authorization](https://github.com/D1r3Wolf/InCTF-2018-Finals/tree/master/authrw-Crypto%20Challenge/authR_Exploit))<br>
+> 2 Provides us Writing rights of Flag([Writing authorization](https://github.com/D1r3Wolf/InCTF-2018-Finals/tree/master/authrw-Crypto%20Challenge/authW_Exploit))<br>
 ## Now the name `authrw` is making sense `authrization for Reading and Writing`<br>
-* Defending our services is also important. So we have to [patch](https://github.com/Ajay-Aj-00/Test/tree/master/patch) the Vulnerabilities.
+* Defending our services is also important. So we have to [patch](https://github.com/D1r3Wolf/InCTF-2018-Finals/tree/master/authrw-Crypto%20Challenge/patch) the Vulnerabilities.
