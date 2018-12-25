@@ -4,4 +4,4 @@ It is Finals round (Attack and Defense round on Dec 20 2018) for the top 30 team
 * Attack and Defense rounf is conducted on 20-12-2018 at Amritha University,Kerala
 * we the team **Invaders** also participated and enjoyed a lot.
 ### Score Board of Finals
-[scoreboard](https://raw.githubusercontent.com/Ajay-Aj-00/Test/master/Images/score.jpg)
+![scoreboard](https://raw.githubusercontent.com/Ajay-Aj-00/Test/master/Images/score.jpg)
